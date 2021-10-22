@@ -4,7 +4,7 @@
 
 using namespace std;
 
-const int SIZE = 200;
+const int MAX_N = 200;
 
 int countAccurance(char arr[], char ch)
 {
@@ -25,7 +25,7 @@ int countAccurance(char arr[], char ch)
 int main()
 {
     char letter;
-    char symbol_array[SIZE];
+    char symbol_array[MAX_N];
     int string_count;
     string characters_in = " characters in ";
 

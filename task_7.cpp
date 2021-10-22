@@ -36,7 +36,7 @@ void numberOfPositivesElements()
         if (tempPositiveElements > positivesElementsCount)
         {
             positivesElementsCount = tempPositiveElements;
-            rowIndex = i + 1;
+            rowIndex = i;
             tempPositiveElements = 0;
         }
         else if (tempPositiveElements == positivesElementsCount)
