@@ -1,30 +1,27 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
 void IntelligenceService(int arr[], int size)
 {
     int height_difference = 100;
-    int temp_difference = 100;
+    int temp;
     int indexI, indexJ;
 
     for (int i = 0; i < size - 1; i++)
     {
-        for (int j = 0; j < size; j++)
+        for (int j = i + 1; j < size; j++)
         {
-            if (arr[i] - arr[j] < temp_difference)
+            temp = abs(arr[i] - arr[j]);
+
+            if (temp < height_difference)
             {
-                temp_difference = arr[i] - arr[j];
-                indexI = i;
-                indexJ = j;
+                height_difference = temp;
+                indexI = i + 1;
+                indexJ = j + 1;
             }
         }
-
-        if (temp_difference < height_difference)
-        {
-            height_difference = temp_difference;
-        }
-        temp_difference = 0;
     }
 
     cout << indexI << " " << indexJ << endl;
